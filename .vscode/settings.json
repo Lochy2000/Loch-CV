@@ -13,7 +13,7 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Default Light+",
+   "workbench.colorTheme": "Kimbie Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
    "liveServer.settings.port": 5501,
 }

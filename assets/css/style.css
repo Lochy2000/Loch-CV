@@ -27,6 +27,9 @@ body {
 .ui-menu-color-contact{
     background-color: #3498db;
 }
+.bg-color-contact{
+  background-color: #fff;
+}
 .ui-menu-color-download{
     background-color: #525252;
 }
@@ -311,4 +314,49 @@ header {
 
    .history-items{
     margin-bottom: 30px;
+   }
+
+   /* ----------- Contact Form -------------*/
+
+   .bg-color-contact {
+    background-image: url(../images/9lZ7.gif);
+   }
+  .contact-heading {
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .center-form input, textarea  {
+    background-color: #ce837edc;
+  }
+  .forn-control{
+   
+  }
+  #projectsummary {
+    background-color: #ce837edc ;
+  }
+
+  button[type="submit"] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #fafafa;
+    background-color: #e84610;
+  }
+
+
+   /* ----------- Media Query -------------*/
+   @media (min-width:992px){
+  
+    .center-form {
+      padding-top: 30px;
+      min-height: 240px;
+      margin: 0 auto;
+      max-width: 50%;
+    }
    }
