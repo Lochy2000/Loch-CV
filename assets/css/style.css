@@ -33,6 +33,12 @@ body {
 .ui-menu-color-download{
     background-color: #525252;
 }
+.ui-menu-color-interests{
+  background-color: darkgoldenrod;  
+}
+.ui-menu-color-github{
+  background-color: #000;
+}
 /* ----------- Special paddings/margins/text -------------*/
 
 h1,
@@ -351,6 +357,44 @@ header {
 
 
    /* ----------- Media Query -------------*/
+   @media (max-width: 768px) {
+    .name {
+      font-size: 2rem;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .nav {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  
+    .logo {
+      width: 200px;
+      height: 100px;
+    }
+  
+    .center-form {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    header {
+      text-align: center;
+    }
+  
+    .nav {
+      flex-direction: column;
+    }
+  
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+  }
+   
    @media (min-width:992px){
   
     .center-form {
@@ -360,3 +404,53 @@ header {
       max-width: 50%;
     }
    }
+/*--------------------------------------------Map*/
+
+div#map {
+  min-height: 360px;
+}
+
+
+/*--------------------------------------------Loader*/
+.loader1-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e7e2cffe; /* You can change the background color if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it covers the page content */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.loader1 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #000;
+  border: 2px solid;
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side,currentColor 90%,#0000),
+    radial-gradient(farthest-side,#0000 90%,currentColor);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation: l8 2s infinite;
+}
+
+@keyframes l8 {
+  100% {
+    background-position: 0px 32px, -16px 0;
+  }
+}
+
+/* Spin-out animation */
+.spin-out {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
