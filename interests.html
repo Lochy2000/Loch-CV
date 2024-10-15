@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rosie Odenkirk</title>
+    <title>Lochlann O'Higgins</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+     <!-----------------------HEADER------------------------------------------>
     <header>
         <div class="row no-gutters">
             <a href="index.html" class="col-md-4 logo">
@@ -22,7 +23,7 @@
                 <div class="row no-gutters bg-color-name-title">
                     <div class="col heading">
                         <h1 class="name">Lochlann O'Higgins</h1>
-                        <h2 class="title">Full Stack Developer</h2>
+                        <h2 class="title">Student Developer / Website deisnger / Table Tennis coach </h2>
                     </div>
                 </div>
                 <div class="row no-gutters">
@@ -53,7 +54,12 @@
             </div>
         </div>
     </header>
-
+<!-----------------------Page Loader------------------------------------------>
+<div class="loader1-container" id="loader1-container">
+    <div class="loader1"></div>
+  </div>
+  
+<!-----------------------Main Content------------------------------------------>
     <section class="container-fluid">
         <div class="row">
             <div class="col-md-4 bg-color-conferences section-column">
@@ -63,6 +69,7 @@
                             Conferences And Meetups Attended
                         </h3>
                     </div>
+                    <div id="map"></div>
                 </div>
                 <div id="map"></div>
             </div>
@@ -72,6 +79,7 @@
                         <h3 class="section-heading uppercase">My Groups And Societies</h3>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
                         <div class="row">
@@ -79,7 +87,7 @@
                                 <i class="three-reasons-icon fa fa-users" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">Coding Grace</h4>
+                                <h4 class="three-reasons-heading uppercase">EasyWebs</h4>
                                 <p>
                                     Coding Grace are a group of developers based in Ireland who love to code and do other geeky and not necessarily crafty activities. Some of us code full-time, or just for fun (or both). We have people who are part of other technical user groups such as
                                     Dublin ALT.NET, GameCraft, Python Ireland, Ruby Ireland and more.
@@ -94,7 +102,7 @@
                                 <i class="three-reasons-icon fa fa-users" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">Django Girls</h4>
+                                <h4 class="three-reasons-heading uppercase">Coding Institute</h4>
                                 <p>
                                     Django Girls is a non-profit organization and a community that empowers and helps women to organize free, one-day programming workshops by providing tools, resources and support. We are a volunteer run organization with hundreds of people contributing
                                     to bring more amazing women into the world of technology.
@@ -109,7 +117,7 @@
                                 <i class="three-reasons-icon fa fa-users" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">Full Stack NY</h4>
+                                <h4 class="three-reasons-heading uppercase">ParallaxCinematics</h4>
                                 <p>
                                     Our meetup is an event where web designers and developers can come together to learn from and teach each other about emerging technologies. While speakers at Full Stack focus primarily on angularjs, react, node, hapiJS, espress, plain ole' JavaScript,
                                     HTML, and CSS, we encourage all local web professionals to join us for vivid discussions around technology across the stack in any language.
@@ -124,7 +132,7 @@
                                 <i class="three-reasons-icon fa fa-users" aria-hidden="true"></i>
                             </div>
                             <div class="col-10">
-                                <h4 class="three-reasons-heading uppercase">IoT Nation</h4>
+                                <h4 class="three-reasons-heading uppercase">WheelChair Rugby</h4>
                                 <p>
                                     IoT Nation's mission is to inspire, engage, and connect entrepreneurs, investors, professionals, & enthusiasts worldwide who are active in the Internet of Things (IoT). This group is for professionals and enthusiasts in the Internet of Things. We welcome
                                     those who want to learn about this emerging field which is fascinating as IoT makes use of a diverse range of technologies and has the promise to impact a vast number of vertical markets.
@@ -199,9 +207,26 @@
         </div>
 
     </footer>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<!-----------------------Script------------------------------------------>
+    <script>
+        window.addEventListener('load', function () {
+      // Wait for 3 seconds before triggering the spin-out
+      setTimeout(function () {
+        // Add the spin-out class to the entire loader container
+        const loaderContainer = document.getElementById('loader1-container');
+        loaderContainer.classList.add('spin-out');
+        
+        // Wait for the spin-out transition to finish (0.5s) before hiding the loader
+        setTimeout(function () {
+          loaderContainer.classList.add('hidden'); // Hide the loader container
+          document.getElementById('content').style.display = 'block'; // Show the content
+        }, 500); // This timing matches the 0.5s transition duration
+      }, 2000); // Delay for 3 seconds before starting the spin-out
+    });
+  </script>
+    <!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap"></script>
-    <script src="assets/js/maps.js"></script>
+    <script src="assets/js/maps.js"></script> -->
 </body>
 
 </html>

@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/github-information.js"></script>
-    <title>Rosie</title>
+
+    <title>Lochlann O'Higgins</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <div class="row no-gutters bg-color-name-title">
                     <div class="col heading">
                         <h1 class="name">Lochlann O'Higgins</h1>
-                        <h2 class="title">Full Stack Developer</h2>
+                        <h2 class="title">Student Developer / Website deisnger / Table Tennis coach </h2>
                     </div>
                 </div>
                 <div class="row no-gutters">
@@ -57,7 +57,10 @@
             </div>
         </div>
     </header>
-
+<!-----------------------Page Loader------------------------------------------>
+<div class="loader1-container" id="loader1-container">
+    <div class="loader1"></div>
+  </div>
     <!-----------------------Main content------------------------------------------>
     <section class="container-fluid">
         <div class="row bg-color-contact">
@@ -66,7 +69,7 @@
                 <h5 class="uppercase text-center">You can also search on other user profiles</h5>
 
                 <div class="center-form">
-                    <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()" />
+                    <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()"/>
                     <div id="gh-user-data"></div>
                     <div id="gh-repo-data"></div>
 
@@ -140,6 +143,24 @@
         </div>
 
     </footer>
+<!-----------------------Script------------------------------------------>
+    <script>
+        window.addEventListener('load', function () {
+      // Wait for 3 seconds before triggering the spin-out
+      setTimeout(function () {
+        // Add the spin-out class to the entire loader container
+        const loaderContainer = document.getElementById('loader1-container');
+        loaderContainer.classList.add('spin-out');
+        
+        // Wait for the spin-out transition to finish (0.5s) before hiding the loader
+        setTimeout(function () {
+          loaderContainer.classList.add('hidden'); // Hide the loader container
+          document.getElementById('content').style.display = 'block'; // Show the content
+        }, 500); // This timing matches the 0.5s transition duration
+      }, 2000); // Delay for 3 seconds before starting the spin-out
+    });
+  </script>
+    
 </body>
 
 </html>
