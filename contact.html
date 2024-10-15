@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/github-syles.css">
     <title>Loch's CV</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "KAv3TOybmYwl65OzS",
+      });
+      emailjs.send("service_p0zh8lg","cv",{name: "Loch", notes: "The project Idea"});
+
+   })();
+</script>
 </head>
 <body>
     <!------------------------------MENU and HEADER -------------------------->
